@@ -4,4 +4,5 @@ gradle*
 learn_to_springboot2.iml
 out*
 settings.gradle*
-
+/docker/datastore/db/mysql
+docker/db/mysql
