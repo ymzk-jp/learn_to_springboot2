@@ -4,8 +4,13 @@ services:
     build: ./docker/db/mysql
     ports:
       - "3306:3306"
+    volumes:
+      - "./docker/db/mysql/docker-entrypoint-initdb.d:/var/lib/mysql"
     environment:
       MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      MYSQL_DATABASE: test
       TZ: "Asia/Tokyo"
     restart: always
   app:
